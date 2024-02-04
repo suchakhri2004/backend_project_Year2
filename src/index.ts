@@ -68,7 +68,7 @@ const ifnotLogin = (req: RequestWithToken, res: Response, next: NextFunction) =>
             res.status(401).send(`Unauthorized: Invalid token.`);
         }
     }
-};
+}
 
 
 app.get('/mainpage', ifnotLogin, async (req: RequestWithToken, res: Response) => {
